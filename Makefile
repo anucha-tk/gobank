@@ -12,3 +12,5 @@ migrate-up:
 	migrate -path db/migration -database "postgresql://$(DATABASE_USERNAME):$(DATABASE_PASSWORD)@localhost:5432/$(DATABASE_NAME)?sslmode=disable" --verbose up
 migrate-down:
 	migrate -path db/migration -database "postgresql://$(DATABASE_USERNAME):$(DATABASE_PASSWORD)@localhost:5432/$(DATABASE_NAME)?sslmode=disable" --verbose down
+sqlc-gen:
+	sqlc generate

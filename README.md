@@ -10,8 +10,12 @@
 ## tech and tools
 
 - golang
-- postgresql
-- migrate [https://github.com/golang-migrate/migrate]
+- database
+  - postgresql
+- SQL Query Builders
+  - [slqc](https://github.com/sqlc-dev/sqlc)
+- Database Schema Migration
+  - [migrate](https://github.com/golang-migrate/migrate)
 
 ## migrate
 
@@ -29,4 +33,12 @@
 
 ```bash
 ❯ migrate -path db/migration -database "postgresql://<user>:<user_password>@localhost:5432/<db_name>?sslmode=disable" --verbose down
+```
+
+## sqlc
+
+### init
+
+```bash
+sqlc init
 ```
