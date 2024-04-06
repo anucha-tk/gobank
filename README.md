@@ -4,7 +4,12 @@
 
 - [GOBANK](#gobank)
   - [tech and tools](#tech-and-tools)
-  - [migrate](#migrate) - [up](#up) - [down](#down)
+  - [migrate](#migrate)
+    - [up](#up)
+    - [down](#down)
+  - [sqlc](#sqlc)
+    - [init](#init)
+  - [testing](#testing)
   <!--toc:end-->
 
 ## tech and tools
@@ -41,4 +46,15 @@
 
 ```bash
 sqlc init
+```
+
+## testing
+
+> we use testify
+
+```bash
+# default cache
+go test -v ./...
+# not cache
+go test -v -count=1 ./...
 ```
